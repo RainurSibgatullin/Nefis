@@ -1,0 +1,184 @@
+.tabs {
+    max-width: 90%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    margin: 75px auto;
+    border-bottom: 4px solid #ccc;
+}
+.tabs:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.tabs input[type=radio] {
+    display:none;
+}
+.tabs label p {
+    padding: 5px;
+    margin-right: 0;
+}
+.tabs label {
+    display: block;
+    float: left;
+    width: 30%;
+    color: #ccc;
+    font-size: 30px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2;
+    cursor: pointer;
+    box-shadow: inset 0 4px #ccc;
+    border-bottom: 4px solid #ccc;
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+.tabs label span {
+    display: none;
+}
+.tabs label:hover {
+    color: #3498db;
+    box-shadow: inset 0 4px #3498db;
+    border-bottom: 4px solid #3498db;
+}
+.tab-content {
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color:#ffffff;
+}
+.tabs [id^="tab"]:checked + label {
+    background: #FFF;
+    box-shadow: inset 0 4px #3498db;
+    border-bottom: 4px solid #3498db;
+    color: #3498db;
+}
+#tab-first:checked ~ #tab-content-1,
+#tab-second:checked ~ #tab-content-2,
+#tab-third:checked ~ #tab-content-3
+{
+    display: block;
+}
+@media (min-width: 768px) {
+    .tabs p {
+        padding: 5px;
+        margin-right: 10px;
+    }
+    .tabs {
+    max-width: 750px;
+    margin: 50px auto;
+    }
+}
+/**********popup links**********/
+.link_group {
+margin:20px auto;
+width:555px;
+text-align:center;
+}
+.link_group a {
+margin:0 20px;
+padding:5px 15px;
+color:#000;
+font-weight:bold;
+display:inline-block;
+vertical-align:top;
+*display:inline;
+*zoom:1;
+position:relative;
+text-decoration:none;
+text-transform:uppercase;
+border:1px solid #ccc;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+behavior: url(PIE.htc);
+}
+.link_group a:hover {
+color:#cc0000;
+}
+/**********All styles popup**********/
+.popup {
+padding:5px 15px 15px;
+position:fixed;
+top:100px;
+left:50%;
+display:none;
+overflow:hidden;
+border:1px solid #ccc;
+background:#fff;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:15px;
+z-index:100;
+behavior: url(PIE.htc);
+}
+.popup h2 {
+font:bold 18px/32px Arial, san-serif;
+}
+.popup a.close {
+width:16px;
+height:16px;
+display:block;
+text-indent:-9999px;
+position:absolute;
+top:10px;
+right:10px;
+background:url(images/close.png) no-repeat;
+}
+/**********popup with form**********/
+.reg_form {
+margin-left:-200px;
+width:400px;
+}
+.reg_form form {
+margin-top:10px;
+}
+.reg_form label {
+width:100px;
+height:26px;
+font:bold 12px/26px Arial, san-serif;
+display:inline-block;
+vertical-align:top;
+*display:inline;
+*zoom:1;
+}
+.reg_form input[type=text], .reg_form input[type=password] {
+margin-bottom:10px;
+padding:0 3px;
+width:274px;
+height:22px;
+font:bold 12px/26px Arial, san-serif;
+border:1px solid #ccc;
+}
+.reg_form input[type=submit] {
+margin:10px 15px 0 0;
+padding:3px 10px;
+float:right;
+background:#ccc;
+border:0;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+font:bold 10px Arial, san-serif;
+text-transform:uppercase;
+position:relative;
+cursor:pointer;
+behavior: url(PIE.htc);
+}
+.reg_form input[type=submit]:hover {
+color:#fff;
+}
+/**********overlay styles**********/
+#overlay {
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+display:none;
+background:#000;
+opacity:.8;
+}
